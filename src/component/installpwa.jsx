@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Download } from "lucide-react"; // pastikan lucide-react terinstal
+import { Download } from "lucide-react";
 
 export default function InstallPWA() {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
@@ -7,6 +7,7 @@ export default function InstallPWA() {
 
   useEffect(() => {
     const handler = (e) => {
+      console.log("beforeinstallprompt triggered");
       e.preventDefault();
       setDeferredPrompt(e);
       setShowInstall(true);
@@ -37,23 +38,18 @@ export default function InstallPWA() {
         color: "white",
         padding: "12px 16px",
         borderRadius: "9999px",
-        display: "flex",
+        display: "inline-flex", // ganti dari "flex"
         alignItems: "center",
         boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
-        gap: 8,
         fontWeight: "600",
         border: "none",
         cursor: "pointer",
-        transition: "transform 0.2s ease",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "scale(1.05)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "scale(1)";
+        fontSize: 14,
       }}
     >
-      <Download size={18} />
+      <span style={{ display: "inline-block", marginRight: 8 }}>
+        <Download size={18} />
+      </span>
       Install App
     </button>
   );
