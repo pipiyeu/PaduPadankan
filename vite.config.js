@@ -16,8 +16,8 @@ export default defineConfig({
         "favicon.svg"
       ],
       manifest: {
-        name: "M2Outfit",
-        short_name: "M2Outfit",
+        name: "PaduPadan App",
+        short_name: "Padu Padan",
         description: "Aplikasi padu padan outfit-mu!",
         theme_color: "#2E8B57",
         background_color: "#ffffff",
@@ -25,20 +25,20 @@ export default defineConfig({
         start_url: "/",
         icons: [
           {
-            src: "/icons/web-app-manifest-192x192.png",
+            src: "/favicon/web-app-manifest-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/icons/web-app-manifest-512x512.png",
+            src: "/favicon/web-app-manifest-512x512.png",
             sizes: "512x512",
             type: "image/png",
           },
           {
-            src: "/icons/web-app-manifest-512x512.png",
+            src: "/favicon/web-app-manifest-512x512.png",
             sizes: "512x512",
             type: "image/png",
-            purpose: "any maskable",
+            purpose: "maskable",
           },
         ],
       },
